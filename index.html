@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LAC AI</title>
+<title>LAC AI - Free & Open Source</title>
 
 <style>
 *{
@@ -13,29 +13,41 @@
     font-family:Arial,Helvetica,sans-serif;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     background:#0d1117;
-    color:white;
+    color:#fff;
 }
 
 header{
-    padding:20px 10%;
+    position:sticky;
+    top:0;
+    background:#161b22ee;
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid #30363d;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    border-bottom:1px solid #222;
+    padding:20px 8%;
 }
 
 .logo{
-    font-size:30px;
+    font-size:32px;
     font-weight:bold;
     color:#58a6ff;
 }
 
+nav{
+    display:flex;
+    gap:25px;
+}
+
 nav a{
-    color:#ccc;
     text-decoration:none;
-    margin-left:25px;
+    color:#c9d1d9;
     transition:.2s;
 }
 
@@ -44,7 +56,7 @@ nav a:hover{
 }
 
 .hero{
-    min-height:85vh;
+    min-height:90vh;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -53,16 +65,17 @@ nav a:hover{
 }
 
 .hero h1{
-    font-size:70px;
+    font-size:72px;
     margin-bottom:20px;
 }
 
 .hero p{
-    color:#aaa;
+    max-width:750px;
+    color:#8b949e;
     font-size:22px;
-    max-width:700px;
+    line-height:1.6;
     margin:auto;
-    margin-bottom:35px;
+    margin-bottom:40px;
 }
 
 .buttons{
@@ -73,10 +86,11 @@ nav a:hover{
 }
 
 .btn{
-    padding:15px 35px;
     text-decoration:none;
+    padding:16px 36px;
     border-radius:10px;
     font-size:18px;
+    font-weight:bold;
     transition:.25s;
 }
 
@@ -100,34 +114,49 @@ nav a:hover{
 }
 
 .features{
+    padding:80px 8%;
+}
+
+.features h2{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:42px;
+}
+
+.grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
-    padding:80px 10%;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
 }
 
 .card{
     background:#161b22;
     border:1px solid #30363d;
+    border-radius:14px;
     padding:30px;
-    border-radius:15px;
+    transition:.2s;
 }
 
-.card h2{
+.card:hover{
+    transform:translateY(-6px);
+    border-color:#58a6ff;
+}
+
+.card h3{
     color:#58a6ff;
     margin-bottom:15px;
 }
 
 .card p{
-    color:#bbb;
+    color:#b1bac4;
     line-height:1.6;
 }
 
 footer{
     text-align:center;
-    color:#777;
     padding:40px;
-    border-top:1px solid #222;
+    color:#8b949e;
+    border-top:1px solid #30363d;
 }
 </style>
 </head>
@@ -135,73 +164,79 @@ footer{
 <body>
 
 <header>
-<div class="logo">LAC AI</div>
+    <div class="logo">LAC AI</div>
 
-<nav>
-<a href="#">Home</a>
-<a href="#features">Features</a>
-<a href="#">Docs</a>
-<a href="#">GitHub</a>
-</nav>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#features">Features</a>
+        <a href="https://github.com/sillyjoshua/local-ai" target="_blank">GitHub</a>
+    </nav>
 </header>
 
 <section class="hero">
+    <div>
+        <h1>LAC AI</h1>
 
-<div>
+        <p>
+            A free, open-source AI that anyone can use, modify, self-host,
+            and fork. No subscriptions. No locked features. Just AI built
+            for everyone.
+        </p>
 
-<h1>LAC AI</h1>
+        <div class="buttons">
+            <a class="btn primary" href="https://lac.jsx.pm/local-ai-chat.zip">
+                Download
+            </a>
 
-<p>
-A completely free and open-source AI for everyone.
-Use it, modify it, self-host it, and fork it without restrictions.
-Build something amazing.
-</p>
-
-<div class="buttons">
-<a href="#" class="btn primary">Get Started</a>
-<a href="#" class="btn secondary">View on GitHub</a>
-</div>
-
-</div>
-
+            <a class="btn secondary" href="https://github.com/sillyjoshua/local-ai" target="_blank">
+                View on GitHub
+            </a>
+        </div>
+    </div>
 </section>
 
 <section class="features" id="features">
 
+<h2>Why LAC AI?</h2>
+
+<div class="grid">
+
 <div class="card">
-<h2>🆓 Free Forever</h2>
-<p>No subscriptions, no hidden costs, no premium features locked away.</p>
+<h3>🆓 Completely Free</h3>
+<p>Use LAC AI without subscriptions, limits, or paywalls.</p>
 </div>
 
 <div class="card">
-<h2>💻 Open Source</h2>
-<p>Every line of code is available for everyone to inspect, improve, and learn from.</p>
+<h3>💻 Open Source</h3>
+<p>Every part of the project is open for anyone to inspect and improve.</p>
 </div>
 
 <div class="card">
-<h2>🍴 Free to Fork</h2>
-<p>Create your own version of LAC AI and build whatever you want with it.</p>
+<h3>🍴 Free to Fork</h3>
+<p>Create your own version of LAC AI and build whatever you want.</p>
 </div>
 
 <div class="card">
-<h2>⚡ Fast</h2>
-<p>Built with performance in mind for quick responses and lightweight deployments.</p>
+<h3>🌍 Self-Host Anywhere</h3>
+<p>Run LAC AI locally on your own PC or deploy it to your own server.</p>
 </div>
 
 <div class="card">
-<h2>🌍 Self Host</h2>
-<p>Run LAC AI on your own computer or server. You're always in control.</p>
+<h3>⚡ Fast & Lightweight</h3>
+<p>Designed to be simple, responsive, and easy to run.</p>
 </div>
 
 <div class="card">
-<h2>❤️ Community Driven</h2>
-<p>Contributions, pull requests, and ideas are always welcome.</p>
+<h3>❤️ Community Driven</h3>
+<p>Pull requests, bug fixes, and new ideas are always welcome.</p>
+</div>
+
 </div>
 
 </section>
 
 <footer>
-© 2026 LAC AI • Free • Open Source • Free to Fork
+    © 2026 LAC AI • Free • Open Source • Free to Fork
 </footer>
 
 </body>
