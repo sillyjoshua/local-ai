@@ -50,6 +50,10 @@ ollama list
 
 **Requirements:** [Node.js](https://nodejs.org) (v18+) and npm.
 
+```Setup
+Extract and move the extracted folder to C:/Users/<your-user>
+```
+
 ```bash
 cd local-ai-chat
 npm install
