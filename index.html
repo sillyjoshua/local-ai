@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nova AI - Free & Open Source</title>
+<title>LocalMate – Free & Open Source AI</title>
 
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,Helvetica,sans-serif;
+    font-family:Inter,Arial,sans-serif;
 }
 
 html{
@@ -20,35 +20,44 @@ html{
 body{
     background:#0d1117;
     color:#fff;
+    overflow-x:hidden;
 }
 
 header{
-    position:sticky;
+    position:fixed;
     top:0;
-    background:#161b22ee;
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid #30363d;
+    width:100%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:20px 8%;
+    padding:18px 8%;
+    background:rgba(13,17,23,.75);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid #21262d;
+    z-index:1000;
 }
 
 .logo{
-    font-size:32px;
-    font-weight:bold;
+    font-size:28px;
+    font-weight:800;
+    color:#fff;
+    letter-spacing:-1px;
+}
+
+.logo span{
     color:#58a6ff;
 }
 
 nav{
     display:flex;
-    gap:25px;
+    gap:28px;
 }
 
 nav a{
-    text-decoration:none;
     color:#c9d1d9;
+    text-decoration:none;
     transition:.2s;
+    font-size:15px;
 }
 
 nav a:hover{
@@ -56,85 +65,85 @@ nav a:hover{
 }
 
 .hero{
-    min-height:90vh;
+    min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:40px;
+    padding:120px 30px 60px;
 }
 
 .hero h1{
     font-size:72px;
-    margin-bottom:20px;
+    margin-bottom:18px;
+    letter-spacing:-2px;
 }
 
 .hero p{
-    max-width:750px;
+    max-width:760px;
+    margin:auto;
     color:#8b949e;
     font-size:22px;
-    line-height:1.6;
-    margin:auto;
+    line-height:1.7;
     margin-bottom:40px;
 }
 
 .buttons{
     display:flex;
     justify-content:center;
-    gap:20px;
+    gap:18px;
     flex-wrap:wrap;
 }
 
 .btn{
     text-decoration:none;
-    padding:16px 36px;
-    border-radius:10px;
-    font-size:18px;
+    padding:16px 34px;
+    border-radius:12px;
     font-weight:bold;
     transition:.25s;
 }
 
-.primary{
+.download{
     background:#238636;
-    color:white;
+    color:#fff;
 }
 
-.primary:hover{
+.download:hover{
     background:#2ea043;
 }
 
-.secondary{
+.github{
     border:2px solid #58a6ff;
     color:#58a6ff;
 }
 
-.secondary:hover{
+.github:hover{
     background:#58a6ff;
-    color:white;
+    color:#fff;
 }
 
 .features{
-    padding:80px 8%;
+    padding:90px 8%;
 }
 
 .features h2{
     text-align:center;
-    margin-bottom:50px;
     font-size:42px;
+    margin-bottom:50px;
 }
 
 .grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:25px;
+    gap:24px;
 }
 
 .card{
     background:#161b22;
     border:1px solid #30363d;
-    border-radius:14px;
-    padding:30px;
-    transition:.2s;
+    border-radius:16px;
+    padding:28px;
+    transition:.25s;
 }
 
 .card:hover{
@@ -143,8 +152,8 @@ nav a:hover{
 }
 
 .card h3{
+    margin-bottom:14px;
     color:#58a6ff;
-    margin-bottom:15px;
 }
 
 .card p{
@@ -153,10 +162,30 @@ nav a:hover{
 }
 
 footer{
-    text-align:center;
     padding:40px;
+    text-align:center;
     color:#8b949e;
-    border-top:1px solid #30363d;
+    border-top:1px solid #21262d;
+}
+
+@media(max-width:700px){
+
+.hero h1{
+    font-size:52px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+nav{
+    gap:16px;
+}
+
+.logo{
+    font-size:24px;
+}
+
 }
 </style>
 </head>
@@ -164,71 +193,82 @@ footer{
 <body>
 
 <header>
-    <div class="logo">Nova AI</div>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#features">Features</a>
-        <a href="https://github.com/sillyjoshua/local-ai" target="_blank">GitHub</a>
-    </nav>
+<div class="logo">Local<span>Mate</span></div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#features">Features</a>
+<a href="https://github.com/sillyjoshua/local-ai" target="_blank">GitHub</a>
+</nav>
+
 </header>
 
 <section class="hero">
-    <div>
-        <h1>Nova AI</h1>
 
-        <p>
-            A free, open-source AI that anyone can use, modify, self-host,
-            and fork. No subscriptions. No locked features. Just AI built
-            for everyone.
-        </p>
+<div>
 
-        <div class="buttons">
-            <a class="btn primary" href="https://github.com/sillyjoshua/local-ai/releases/tag/AHHHHH-so-cool-ai">
-                Download
-            </a>
+<h1>Run AI. Locally.</h1>
 
-            <a class="btn secondary" href="https://github.com/sillyjoshua/local-ai" target="_blank">
-                View on GitHub
-            </a>
-        </div>
-    </div>
+<p>
+LocalMate is a free and open-source AI that runs on your own computer.
+Chat privately, self-host with ease, modify the source code, and fork it
+to build your own AI experience.
+</p>
+
+<div class="buttons">
+
+<a class="btn download"
+href="https://github.com/sillyjoshua/local-ai/releases/tag/AHHHHH-so-cool-ai">
+Download
+</a>
+
+<a class="btn github"
+href="https://github.com/sillyjoshua/local-ai"
+target="_blank">
+View on GitHub
+</a>
+
+</div>
+
+</div>
+
 </section>
 
 <section class="features" id="features">
 
-<h2>Why Nova AI?</h2>
+<h2>Why LocalMate?</h2>
 
 <div class="grid">
 
 <div class="card">
-<h3>🆓 Completely Free</h3>
-<p>Use Nova AI without subscriptions, limits, or paywalls.</p>
+<h3>🖥️ Runs Locally</h3>
+<p>Your chats stay on your own computer. No cloud required.</p>
+</div>
+
+<div class="card">
+<h3>🆓 Free Forever</h3>
+<p>No subscriptions, hidden fees, or premium features.</p>
 </div>
 
 <div class="card">
 <h3>💻 Open Source</h3>
-<p>Every part of the project is open for anyone to inspect and improve.</p>
+<p>Inspect, modify, and contribute to every part of the project.</p>
 </div>
 
 <div class="card">
-<h3>🍴 Free to Fork</h3>
-<p>Create your own version of Nova AI and build whatever you want.</p>
+<h3>🍴 Fork It</h3>
+<p>Create your own version of LocalMate and customize it however you like.</p>
 </div>
 
 <div class="card">
-<h3>🌍 Self-Host Anywhere</h3>
-<p>Run Nova AI locally on your own PC or deploy it to your own server.</p>
+<h3>⚡ Fast</h3>
+<p>Built for quick startup times and responsive local inference.</p>
 </div>
 
 <div class="card">
-<h3>⚡ Fast & Lightweight</h3>
-<p>Designed to be simple, responsive, and easy to run.</p>
-</div>
-
-<div class="card">
-<h3>❤️ Community Driven</h3>
-<p>Pull requests, bug fixes, and new ideas are always welcome.</p>
+<h3>🔒 Private</h3>
+<p>Your conversations belong to you—not someone else's servers.</p>
 </div>
 
 </div>
@@ -236,7 +276,7 @@ footer{
 </section>
 
 <footer>
-    © 2026 Nova AI • Free • Open Source • Free to Fork
+© 2026 LocalMate • Free • Open Source • Self-Hosted AI
 </footer>
 
 </body>
